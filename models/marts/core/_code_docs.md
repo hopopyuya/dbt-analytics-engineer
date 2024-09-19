@@ -1,9 +1,10 @@
 {% docs is_order_completed_docblock %}
-注文が完了したかどうかを示す二進データです。注文のステータスを考慮して、以下のいずれかの値が含まれる可能性があります：
 
-| is_order_completed | 定義                                       |
-| ------------------ | ------------------------------------------ |
-| 1                  | ステータスに基づき、すでに完了している注文 |
-| 0                  | ステータスに基づき、まだ完了していない注文 |
+Binary data which states if the order is completed or not, considering the order status. It can contain one of the following values:
+
+| is_order_completed | definition                                                |
+| ------------------ | --------------------------------------------------------- |
+| 1                  | An order that is not completed yet, based on its status   |
+| 0                  | An order which was completed already, based on its status |
 
 {% enddocs %}
