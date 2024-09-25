@@ -38,7 +38,7 @@ sources:
 models:
   - name: stg_jaffle_shop_customers
     config:
-      materialized: materialized_view
+      materialized: view
     columns:
       - name: customer_id
         tests:
