@@ -1,9 +1,9 @@
-{% set payment_type = get_payment_types() %}
+{% set payment_types = get_payment_types() %}
 
 with order_payments as (
     select * from {{ ref('stg_stripe_order_payments') }}
 ),
-pivot_and_aggregate_payments_to_order_graina as(
+pivot_and_aggregate_payments_to_order_grain as(
     select 
         order_id,
         {% for payment_type in payment_types %}
@@ -27,4 +27,4 @@ pivot_and_aggregate_payments_to_order_graina as(
     group by 1
 )
 
-select * from pivot_and_aggregate_payments_to_order_graina
+select * from pivot_and_aggregate_payments_to_order_grain
