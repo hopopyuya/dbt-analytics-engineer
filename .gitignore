@@ -4,3 +4,4 @@ target/
 dbt_packages/
 logs/
 .DS_Store
+macros/generate_schema_name.sql
