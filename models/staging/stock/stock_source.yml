@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: stock_dataset
+    description: "Dataset containing stock market data"
+    tables:
+      - name: stock_data
+        description: "Table with stock data"
+        identifier: stock_data
+        schema: dbt-analytics-engineer-435907
